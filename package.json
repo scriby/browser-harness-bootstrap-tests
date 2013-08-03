@@ -1,0 +1,11 @@
+{
+    "name": "browser-harness-bootstrap-tests",
+    "version": "0.0.2",
+    "dependencies": {
+        "express": "3.3.4",
+        "browser-harness": "0.0.3",
+        "asyncblock": "2.1.14",
+        "mocha": "1.12.0"
+    },
+    "private": true
+}

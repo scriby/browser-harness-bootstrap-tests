@@ -143,7 +143,7 @@ describe('', function(){
         });
     });
 
-    _it('Types in the typeahead', function(){
+    _it('Expands an accordion', function(){
         assert.equal(driver.findElement('#collapseThree').height(), 0);
 
         driver.findVisible('#collapse .accordion-toggle:last').click();

@@ -13,3 +13,7 @@ node server.js
 # From another terminal
 ./node_modules/mocha/bin/mocha ./tests/tests.js -R spec -t 10000
 ```
+
+The tests run in Chrome by default. To run in a different browser, edit the following line of tests/test.js:
+
+`testBrowser = new harness.Browser({ type: 'chrome' });`

@@ -20,10 +20,7 @@ The tests run in Chrome by default. To run in a different browser, edit the foll
 
 ### Screencasts
 
-[Tests running in Chrome](http://screencast.com/t/0TaRAmUD)
-
-[Tests running in Firefox](http://screencast.com/t/n6hxBjMhsh)
-
-[Tests running in Safari](http://screencast.com/t/3HmnMfMC)
-
-[Tests running in PhantomJS](http://screencast.com/t/Wd4q5kSPsT)
+* [Tests running in Chrome](http://screencast.com/t/0TaRAmUD)
+* [Tests running in Firefox](http://screencast.com/t/n6hxBjMhsh)
+* [Tests running in Safari](http://screencast.com/t/3HmnMfMC)
+* [Tests running in PhantomJS](http://screencast.com/t/Wd4q5kSPsT)

@@ -131,7 +131,7 @@ describe('', function(){
 
         //The close is animated, so need to wait for it
         driver.waitFor(function(){
-            return $('#myModal').css('display') !== 'none';
+            return $('#myModal').css('display') === 'none';
         });
     });
 

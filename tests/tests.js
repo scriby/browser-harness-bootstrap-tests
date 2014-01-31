@@ -40,8 +40,11 @@ describe('', function(){
         //Instead of this type of selector, you should generally prefer to select by class or id.
         driver.findVisible('a[href="./getting-started.html"]').click();
 
-        driver.waitFor(function(){
-            return location.href.indexOf('/getting-started.html') >= 0;
+        driver.waitFor({
+            condition: function(){
+                return location.href.indexOf('/getting-started.html') >= 0;
+            },
+            inBrowser: true
         });
     });
 
@@ -54,16 +57,22 @@ describe('', function(){
     _it('Clicks examples', function(){
         driver.findVisible('a[href="#examples"]').click();
 
-        driver.waitFor(function(){
-            return location.href.indexOf('#examples') >= 0;
+        driver.waitFor({
+            condition: function(){
+                return location.href.indexOf('#examples') >= 0;
+            },
+            inBrowser: true
         });
     });
 
     _it('Clicks on the basic marketing site example', function(){
         driver.findVisible('a.thumbnail[href="examples/hero.html"]').click();
 
-        driver.waitFor(function(){
-            return location.href.indexOf('/hero.html') >= 0;
+        driver.waitFor({
+            condition: function(){
+                return location.href.indexOf('/hero.html') >= 0;
+            },
+            inBrowser: true
         });
     });
 
@@ -75,24 +84,33 @@ describe('', function(){
     _it('Goes back', function(){
         driver.exec(function(){ history.back(); });
 
-        driver.waitFor(function(){
-            return location.href.indexOf('#examples') >= 0;
+        driver.waitFor({
+            condition: function(){
+                return location.href.indexOf('#examples') >= 0;
+            },
+            inBrowser: true
         });
     });
 
     _it('Clicks on base css', function(){
         driver.findVisible('a[href="./base-css.html"]').click();
 
-        driver.waitFor(function(){
-            return location.href.indexOf('/base-css.html') >= 0;
+        driver.waitFor({
+            condition: function(){
+                return location.href.indexOf('/base-css.html') >= 0;
+            },
+            inBrowser: true
         });
     });
 
     _it('Fills in some form fields', function(){
         driver.findVisible('a[href="#forms"]').click();
 
-        driver.waitFor(function(){
-            return location.href.indexOf('#forms') >= 0;
+        driver.waitFor({
+            condition: function(){
+                return location.href.indexOf('#forms') >= 0;
+            },
+            inBrowser: true
         });
 
         var bs = driver.findVisible('#forms .bs-docs-example:first');
@@ -110,16 +128,22 @@ describe('', function(){
     _it('Clicks on javascript', function(){
         driver.findVisible('a[href="./javascript.html"]').click();
 
-        driver.waitFor(function(){
-            return location.href.indexOf('/javascript.html') >= 0;
+        driver.waitFor({
+            condition: function(){
+                return location.href.indexOf('/javascript.html') >= 0;
+            },
+            inBrowser: true
         });
     });
 
     _it('Clicks on Modal', function(){
         driver.findVisible('a[href="#modals"]').click();
 
-        driver.waitFor(function(){
-            return location.href.indexOf('#modals') >= 0;
+        driver.waitFor({
+            condition: function(){
+                return location.href.indexOf('#modals') >= 0;
+            },
+            inBrowser: true
         });
     });
 
@@ -131,15 +155,18 @@ describe('', function(){
 
         //The close is animated, so need to wait for it
         driver.waitFor(function(){
-            return $('#myModal').css('display') === 'none';
+            return driver.findElement('#myModal').css('display') === 'none';
         });
     });
 
     _it('Clicks on Collapse', function(){
         driver.findVisible('a[href="#collapse"]').click();
 
-        driver.waitFor(function(){
-            return location.href.indexOf('#collapse') >= 0;
+        driver.waitFor({
+            condition: function(){
+                return location.href.indexOf('#collapse') >= 0;
+            },
+            inBrowser: true
         });
     });
 
@@ -149,7 +176,7 @@ describe('', function(){
         driver.findVisible('#collapse .accordion-toggle:last').click();
 
         driver.waitFor(function(){
-            return $('#collapseOne').height() === 0;
+            return driver.findElement('#collapseOne').height() === 0;
         });
 
         assert(driver.findElement('#collapseThree').height() > 0);
